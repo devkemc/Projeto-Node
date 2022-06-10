@@ -8,24 +8,30 @@ import {
   import { Exclude } from "class-transformer";
   import { v4 as uuid } from "uuid";
   
-  @Entity("product")
-  class Product {
+  @Entity("sales")
+  class Sales {
     @PrimaryColumn()
     readonly id!: string ;
   
     @Column()
-      name!: string;
+      id_product!: string;
   
     @Column()
-      description!: string;
+      id_client!: string;
   
     @Column()
-      price!: number;
+      quantity!: number;
   
+
+    @Column()
+      grossTotal!: number;
       
     @Column()
-      id_category!: string;
-  
+      discount!: number;
+
+    @Column()
+      amount!: number;
+
     @CreateDateColumn()
       created_at!: Date;
   
@@ -39,5 +45,4 @@ import {
     }
   }
   
-  export { Product };
-  
+  export { Sales };
