@@ -8,8 +8,8 @@ import {
   import { Exclude } from "class-transformer";
   import { v4 as uuid } from "uuid";
   
-  @Entity("product")
-  class Product {
+  @Entity("client")
+  class Client {
     @PrimaryColumn()
     readonly id!: string ;
   
@@ -17,15 +17,30 @@ import {
       name!: string;
   
     @Column()
-      description!: string;
+      phone!: number;
   
     @Column()
-      price!: number;
+      email!: string;
   
+
+    @Column()
+      password!: string;
       
     @Column()
-      id_category!: string;
-  
+      cpf!: number;
+
+    @Column()
+      andress!: string;
+    
+    @Column()
+      city!: string;
+
+    @Column()
+      state!: string;
+
+    @Column()
+      district!: string;
+
     @CreateDateColumn()
       created_at!: Date;
   
@@ -39,5 +54,4 @@ import {
     }
   }
   
-  export { Product };
-  
+  export { Client };
