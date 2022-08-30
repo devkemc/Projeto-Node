@@ -63,3 +63,7 @@ ormconfig.json
 
 criando migration:
 yarn typeorm migration:create -n <nome da migration>
+
+yarn add uuid
+
+yarn @types/uuid
